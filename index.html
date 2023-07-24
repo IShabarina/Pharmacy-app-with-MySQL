@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="CodeHim">
+  <title>Главная</title>
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+  <div id="loader"></div>
+  <div class="overlay"></div>
+
+  <header>
+    <div class="header-container">
+      <h1 class="title">ГЛАВНАЯ</h1>
+      <!-- Поиск -->
+      <form class="form-control">
+        <input type="text" id="elastic" class="search" placeholder="Поиск товаров...">
+      </form>
+      <!-- Личный кабинет -->
+      <div id="account" class="user-account">
+        <a href="prof.html">
+          <div>
+            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M14.316 7.263a2.263 2.263 0 11-4.526 0 2.263 2.263 0 014.526 0zm-1.213 4.133A4.265 4.265 0 0012.053 3a4.263 4.263 0 00-2.867 7.42A9.692 9.692 0 004.874 14C3.468 16.106 3 18.476 3 20.053a1 1 0 002 0c0-1.249.385-3.217 1.537-4.942 1.127-1.688 3.005-3.176 6.106-3.539a.994.994 0 00.46-.176z"
+                fill="#C6CAD8" class="fill"></path>
+              <path d="M20.105 20.052c0-2.003-.857-5.529-3.79-7.694" stroke="#C6CAD8" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="stroke"></path>
+            </svg>
+          </div>
+          <p class="account-name"> Личный кабинет</p>
+          <p class="account-role"> </p>
+        </a>
+        <button class="user_logout_btn hidden">Выйти</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Меню: -->
+    <nav class="main-menu">
+
+      <!-- меню кнопка для мобильной -->
+      <div class="hamb_container">
+        <div class="hamb">
+          <div class="hamb__field" id="hamb">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+        <h2 class="title">AP</h2>
+      </div>
+
+      <ul class="menu-list">
+        <li>
+          <a href="pages/prof.html">
+            <img src="src/image 9.png" class="fa  fa-2x" />
+            <span class="nav-text">
+              Профиль
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="index.html">
+            <img src="src/Group.png" class="fa  fa-2x" />
+            <span class="nav-text">
+              Главная
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a href="pages/tech.html">
+            <img src="src/image 2.png" class="fa  fa-2x" />
+            <span class="nav-text">
+              МедТехника
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a href="pages/child.html">
+            <img src="src/image 3.png" class="fa  fa-2x" />
+            <span class="nav-text">
+              Детям
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/sale.html">
+            <img src="src/image 10.png" class="fa fa-2x" />
+            <span class="nav-text">
+              Акции
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="cart-link" href="#openModal">
+            <img src="src/poisk.png" class="fa fa-2x" />
+            <span class="nav-text">
+              Корзина
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#openModal2">
+            <img src="src/Group1.png" class="fa fa-2x" />
+            <span class="nav-text">
+              Контакты
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Модальное окно Контакты: -->
+    <div id="openModal2" class="modalDialog2">
+      <div>
+        <a href="#close2" title="Закрыть" class="close2">X</a>
+        <h2>Контакты:</h2>
+        Тел. : 8 (800) 123-45-67<br>
+        Почта: aptekapro@mail.ru
+      </div>
+    </div>
+
+    <!-- Модальное окно Корзина: -->
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Закрыть" class="close">X</a>
+        <div class="cart-container">
+          <h2 class="cart-title">В корзине пока ничего нет...</h2>
+          <div id="cart-content-full" class="display-none">
+            <table>
+              <thead>
+                <tr>
+                  <th><strong>Продукт</strong></th>
+                  <th><strong>Колличество</strong></th>
+                  <th><strong>Стоимость</strong></th>
+                </tr>
+              </thead>
+              <tbody id="carttable">
+              </tbody>
+            </table>
+            <hr>
+            <table id="carttotals">
+              <tr>
+                <td><strong>Колличество</strong></td>
+                <td><strong>Общая сумма</strong></td>
+              </tr>
+              <tr>
+                <td>x <span id="itemsquantity">0</span></td>
+                <td><span id="total">0</span>р.</td>
+              </tr>
+              <tr>
+                <td><strong>С учетом скидки: </strong></td>
+                <td><span id="totalWithSale">0</span>р.</td>
+              </tr>
+            </table>
+
+            <div class="form-group cart-delivery">
+              <label for="delivery"><strong>Способ доставки:</strong></label>
+              <select id="delivery" name="delivery">
+                <option value="delivery1">Самовывоз</option>
+                <option value="delivery2" disabled>Доставка курьером</option>
+              </select>
+            </div>
+
+            <div class="form-group cart-pay">
+              <label for="pay"><strong>Способ оплаты:</strong></label>
+              <select id="pay" name="pay">
+                <option value="pay1">Оплата при получении</option>
+                <option value="pay2" disabled>Оплата онлайн</option>
+              </select>
+            </div>
+
+            <div class="form-group cart-adress">
+              <label for="address"><strong>Адрес аптеки:</strong></label>
+              <select id="address" name="address">
+                <option value="address1">Косарева, 50/3</option>
+                <option value="address2">Проспект Ленина, 1</option>
+                <option value="address3">Воинова, 17</option>
+                <option value="address4">Российской Армии, 6</option>
+              </select>
+            </div>
+
+            <div class="cart-buttons">
+              <button id="emptycart">Очистить корзину</button>
+              <button id="checkout">Заказать</button>
+            </div>
+            <div id="cart_alerts"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Содержимое каталога: -->
+    <div class="container">
+      <div id="alerts" class="alerts"></div>
+      <div class="productcont" id="productcont">
+        <!-- товары -->
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="./js/catalog.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/menu.js"></script>
+</body>
+
+</html>

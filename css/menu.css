@@ -1,0 +1,235 @@
+/* главное меню: */
+.main-menu {
+  position: fixed;
+  background:#ffffff;
+  border-right: 1px solid #5F6FFF;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 68px;
+  overflow: hidden;
+  -webkit-transition: width .05s linear;
+  transition: width .05s linear;
+  -webkit-transform: translateZ(0) scale(1,1);
+  z-index: 1000;
+  padding: 15px 5px 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-menu .title {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  .main-menu:hover,
+  .main-menu:focus,
+  nav.main-menu.expanded {
+    width:200px;
+    overflow:visible;
+  }
+}
+
+.main-menu > ul {
+  margin: 7px auto;
+  padding-left: 10px;
+}
+
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 184px;
+  margin-bottom: 10px;
+}
+
+
+/* иконки: */
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  font-size:20px;
+  margin:4px ;
+  opacity: 0.7;
+}
+
+.main-menu li>a {
+  position:relative;
+  display:table;
+  border-collapse:collapse;
+  border-spacing:0;
+  color:#000000;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration:none;
+  -webkit-transform:translateZ(0) scale(1,1);
+  -webkit-transition:all .1s linear;
+  transition:all .1s linear;  
+}
+
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  width: 190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+
+.main-menu li:hover>a,
+nav.main-menu li.active>a {
+color:#fff;
+background-color:#a79999;
+}
+
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+@media (max-width: 575px) {
+  /* меню для мобильного устройства */
+
+  .header-container {
+    margin-top: 63px;
+  }
+
+  main .main-menu {
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: 62px;
+    border-right: none;
+    padding: 0;
+  }
+  
+  main .main-menu:hover, 
+  main .main-menu:focus, 
+  main nav.main-menu.expanded {
+    width: 100%;
+  }
+
+  .main-menu .title {
+    margin-bottom: 0px;
+    height: 24px;
+  }
+
+  .hamb_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 5px 5px;
+  }
+
+  .hamb {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamb__field {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #5F6FFF;
+    transition: 0.2s;
+  }
+
+  .hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .main-menu > ul {
+    padding-left: 0;
+    margin: 0px auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-menu li {
+  width: 100%;
+  text-align: start;
+  margin-bottom: 4px;
+}
+
+.main-menu li>a {
+  width: 100%;
+  color: #5F6FFF;
+}
+
+.main-menu .nav-text {
+width: 100%;
+padding-left: 23px;
+}
+
+.fa {
+  display: none;
+}
+
+.main-menu li:hover>a,
+nav.main-menu li:active>a {
+color:#fff;
+background-color:#a79999;
+}
+
+.opened {
+  overflow: visible;
+}
+}

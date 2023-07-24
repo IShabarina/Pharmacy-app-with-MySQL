@@ -1,0 +1,168 @@
+.profile_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile_log,
+.profile_auth,
+.profile_admin,
+.profile_orders {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #a8b0f7;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.profile_log h6,
+.profile_auth h6,
+.profile_admin h6,
+.profile_orders h6 {
+    background-color: #a8b0f7;
+    width: 100%;
+    height: 40px;
+    margin: 0 0 15px;
+    color: aliceblue;
+    font-size: 14px;
+    padding: 10px 0 0;
+}
+
+.profile_log label,
+.profile_auth label,
+.profile_admin label {
+    font-size: 10px;
+}
+
+.form_log, 
+.form_auth,
+.form_admin  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.form_log input, 
+.form_auth input,
+.form_admin input,
+.form_admin select {
+    border-radius: 3px;
+    border: #eeecec  1px solid;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    outline: #eeecec 1px solid;
+  }
+
+.form_log input::placeholder, 
+.form_auth input::placeholder,
+.form_admin input::placeholder {
+    font-size: 10px;
+  }
+
+  .birthdate-input,
+  .name-input,
+  .form_admin_inputgroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+.profile_admin label {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+}
+
+.profile_log label {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+}
+
+.birthdate-label {
+    margin: 0;
+    margin-right: auto;
+    padding: 0 20px;
+    font-size: 10px;
+    color: #5F6FFF;
+}
+
+  .profile_log .email-label,
+  .profile_log .password-label,
+  .profile_admin .category-label {
+    width: 100%;
+    padding: 0 22px;
+  }
+
+  .form_auth label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  .form_log input:hover, 
+  .form_auth input:hover,
+  .form_log input:active, 
+  .form_auth input:active,
+  .form_auth input:focus-visible, 
+  .form_log input:focus-visible {
+  border: none;
+  outline: #5F6FFF 1px solid;
+}
+
+.flex-start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.orders-list {
+  padding: 5px 20px 15px;
+  font-size: 12px;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border-bottom: #a8b0f7 solid 1px;
+}
+
+.order-item p {
+  margin: 0;
+  line-height: 20px;
+}
+
+
+@media (max-width: 767px) {
+    
+.form_log input, .form_auth input {
+padding: 8px 10px;
+}
+}
+
+.display-none {
+  display: none;
+}
